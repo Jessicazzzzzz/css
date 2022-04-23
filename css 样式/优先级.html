@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        body {
+            color: red !important;
+        }
+        /* 这个优先级最高，生效*/
+        #hi {
+            color: aqua;
+        }
+        /*!important 这个不要添加在会继承的元素上不会生效
+         因为继承的优先级是最低的，它自己有都不会选上，自然
+         也就不会生效这个*/
+        .box {
+            color: orange !important;
+        }
+        div {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+ <div class="box" id="hi">因为因为这个这个我的</div>
+</body>
+</html>
