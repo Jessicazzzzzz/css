@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        span {
+            /*加margin,padding 垂直方向是不显示的，行内元素只有水平方向有显示*/
+            /*解决方法转元素模式，或者加line-height,不能加行高，行内元素的宽高是由内容撑开的
+            可以去computered那查看元素显示模式*/
+            margin: 100px;
+            padding: 100px;
+            /*display: inline-block;*/
+            background-color: pink;
+
+            /*line-height: 100px;*/
+        }
+
+        span:not(:first-child){
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+ <span>span1</span>
+ <span>span2</span>
+
+</body>
+</html>

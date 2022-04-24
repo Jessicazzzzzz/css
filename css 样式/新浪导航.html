@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            height: 45px;
+            box-sizing: border-box;
+            /*background-color: blue;*/
+            font-size: 12px;
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid #4c4c4c;
+
+
+        }
+        li {
+            list-style: none;
+        }
+        .box ul {
+            height: 41px;
+
+        }
+
+        .box ul li {
+            /*width: 80px;*/
+            height: 100%;
+            /*background-color: pink;*/
+            display: inline-block;
+            text-align: center;
+            line-height: 41px;
+        }
+        .box ul li a {
+            /*优化后，a中文字不一样也没有关系，因为它会由内容撑开*/
+            display: inline-block;
+            padding: 0 15px;
+            /*width: 100%;*/
+            height: 100%;
+            text-decoration: none;
+            color: #4c4c4c;
+        }
+        .box ul li:hover a{
+            color: #fc8400;
+            background-color: #edeef0;
+        }
+
+
+    </style>
+</head>
+<body>
+ <div class="box">
+     <ul>
+         <li><a href="#">新浪导航</a></li>
+         <li><a href="#">新浪导航新浪导航</a></li>
+         <li><a href="#">新浪导航</a></li>
+         <li><a href="#">新浪导航</a></li>
+     </ul>
+ </div>
+</body>
+</html>
