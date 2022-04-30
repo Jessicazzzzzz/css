@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+
+        }
+        .top{
+            width: 800px;
+
+            background-color: pink;
+            margin: 0 auto;
+            /*overflow: hidden;*/
+
+        }
+        .left {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            float: left;
+        }
+        .right {
+            width: 400px;
+            height: 200px;
+            background-color: blue;
+            float: left;
+        }
+        .bottom{
+            width: 900px;
+            height: 500px;
+            background-color: darkcyan;
+            /*直接加这个是可以的，让这个盒子会不受上面浮动的影响*/
+            /*但是不完美，上面父盒子还是无法显示*/
+            /*clear:both;*/
+        }
+        /*before 是清除盒子塌陷问题的，因为它转换block的元素模式*/
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+        }
+        /*这个是清除浮动的*/
+        .clearfix::after{
+            clear: both;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+<div class="top clearfix">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+<div class="bottom"></div>
+</body>
+</html>
