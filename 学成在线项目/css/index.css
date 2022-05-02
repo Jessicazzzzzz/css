@@ -1,0 +1,364 @@
+/*检查css文件是否生效*/
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f3f5f7;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    /*    ps*/
+    /*    background-color: pink;*/
+}
+
+.clearfix::before, .clearfix::after {
+    content: '';
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+
+.header {
+    height: 42px;
+    margin: 30px auto;
+}
+
+.header h1 {
+    float: left;
+    width: 192px;
+    height: 42px;
+    margin-right: 70px;
+}
+
+.header .nav {
+    float: left;
+}
+
+.header .nav li {
+    float: left;
+
+}
+
+.header .nav li a {
+    /*必须转元素类型，不然无法生效*/
+    /*文字一般可以不用设置宽，让它自动撑开*/
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    line-height: 42px;
+    padding: 0 9px;
+    color: #050505;
+
+}
+
+.header .nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+.header .search {
+    float: left;
+    width: 412px;
+    height: 42px;
+    /*    ps*/
+    /*    background-color: blue;*/
+    margin-left: 85px;
+
+}
+
+.header .search input {
+    float: left;
+    width: 360px;
+    height: 100%;
+    border: 1px solid #00a4ff;
+}
+
+.header .search button {
+    /*查看显示是block元素所以需要fl*/
+    float: left;
+    width: 50px;
+    height: 42px;
+    border: none;
+    /*一般来说，不太重要的可以用背景图来做*/
+    background-image: url('../images/btn.png');
+}
+
+.header .user {
+    float: right;
+    text-align: center;
+    line-height: 42px;
+    height: 100%;
+    margin-right: 35px;
+}
+
+.header .user img {
+    vertical-align: middle;
+}
+
+.header .user span {
+    display: inline-block;
+    height: 30px;
+}
+
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.banner .content {
+    height: 100%;
+    /*这里还是用背景图比较好*/
+    background: url("../images/banner2.png");
+}
+
+.banner .content .left {
+    float: left;
+    width: 190px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 28px 20px 0;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.banner .content .left li {
+    height: 44px;
+}
+
+.banner .content .left a {
+    color: #fff;
+
+}
+
+.banner .content .left li:hover,
+.banner .content .left a:hover {
+    color: #00b4ff;
+
+}
+
+.banner .content .left span {
+    float: right;
+}
+
+.banner .content .right {
+    float: right;
+    width: 228px;
+    height: 300px;
+    background-color: #fff;
+    margin-top: 50px;
+
+}
+
+.banner .content .right h2 {
+    height: 48px;
+    font-size: 18px;
+    line-height: 48px;
+    background-color: #9bceea;
+    color: white;
+    text-align: center;
+}
+
+.banner .content .right .content_right {
+    padding: 0 20px;
+}
+
+.banner .content .right dl {
+    height: 65px;
+    border-bottom: 2px solid #e5e5e5;
+    padding: 20px 0;
+}
+
+.banner .content .right dt {
+    font-size: 14px;
+    color: #4e4e4e;
+}
+
+.banner .content .right dd a {
+    display: inline-block;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.banner .content .right .more {
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin: 6px auto 11px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    color: #00a4ff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.course {
+    height: 60px;
+    /*background-color: pink;*/
+    margin-top: 10px;
+
+    padding: 0 26px 0 34px;
+}
+
+.course h2 {
+    float: left;
+    line-height: 60px;
+    color: #00a4ff;
+    font-size: 16px;
+    margin-right: 30px;
+}
+
+.course ul li {
+    margin: 21px 0;
+    float: left;
+    text-align: center;
+    padding: 0 30px;
+    border-left: 1px solid #bfbfbf;
+
+}
+
+.course ul li a {
+    display: inline-block;
+    font-size: 16px;
+    color: #050505;
+}
+
+.course .hobby {
+    float: right;
+    display: inline-block;
+    font-size: 14px;
+    color: #00a4ff;
+    line-height: 60px;
+}
+
+.recommend {
+    height: 595px;
+    /*background-color: pink;*/
+    margin-top: 37px;
+}
+
+.recommend .title {
+    height: 40px;
+}
+
+.recommend .title h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+}
+
+.recommend .title a {
+    float: right;
+    margin-right: 35px;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+
+
+.recommend .recommend_content ul li {
+    float: left;
+    width: 228px;
+    height: 270px;
+    /*background-color: blue;*/
+    margin-right: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 3px 0px
+    rgba(118, 118, 118, 0.2);
+
+}
+
+.recommend .recommend_content ul li:nth-of-type(5n) {
+
+    margin-right: 0;
+
+}
+
+.recommend .recommend_content ul li:nth-of-type(n+5) {
+
+    margin-bottom: 0;
+
+}
+
+.recommend .recommend_content li img {
+    width:100%;
+}
+.recommend .recommend_content ul li .info{
+    padding: 25px 24px 0;
+}
+.recommend .recommend_content ul li h3{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.recommend .recommend_content ul li .info p{
+    font-size: 12px;
+    color: #999999;
+}
+.recommend .recommend_content ul li .info span {
+  color: #ff7c2d;
+}
+.footer {
+    height: 417px;
+    /*background-color: blue;*/
+    margin-top: 40px;
+}
+.footer .left{
+    float: left;
+}
+.footer img{
+    margin-top: 33px;
+    margin-bottom: 7px;
+    height: 66px;
+}
+.footer p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.footer .left a {
+    display: block;
+    width: 120px;
+    height: 36px;
+    border: solid 1px #00a4ff;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    color: #00a4ff ;
+}
+
+.footer .right{
+    float: right;
+    margin-top: 30px;
+}
+.footer dl {
+    float: left;
+    margin-left: 140px;
+}
+.footer dl dt{
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+.footer dl dd a{
+    font-size: 12px;
+    color: #333;
+    line-height: 21px;
+}
