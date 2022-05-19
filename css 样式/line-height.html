@@ -11,22 +11,36 @@
             margin-bottom: 100px;
             box-sizing: border-box;
         }
+
         .box1 {
             /*font-size: 0;*/
             /*可以看出其实div是被line-height撑开的*/
             height: 40px;
             line-height: 50px;
         }
+
         .box2 {
             /*height: 50px;*/
             line-height: 50px;
         }
-        
+        .box2 li:first-child{
+            background-color: pink;
+        }
+        .box2 li:not(:first-child){
+            background-color: green;
+        }
+
     </style>
 </head>
 <body>
 <div class="box1">你好</div>
-<div class="box2">你好</div>
+<div class="box2">
+    <ul>
+        <li> 你好1</li>
+        <li> 你好2</li>
+    </ul>
+
+</div>
 <div class="box3">你好</div>
 </body>
 </html>
